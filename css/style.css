@@ -1,0 +1,388 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    color: azure;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    grid-template-rows: auto 1fr auto;
+}
+
+
+/* nav */
+body>header>nav {
+    padding: 20px;
+    margin: 10px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+body>header>nav>a {
+    color: black;
+    text-decoration: none;
+    font-family: 'Lato', sans-serif; 
+    font-size: large;
+    margin: 10px;
+    text-align: center;
+}
+
+body>header>nav>a:hover {
+    color: rgb(4, 87, 160);
+}
+
+
+/* main */
+body>main {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+body>main>a {
+    /* align-content: center; */
+    margin: auto;
+    width: 600px;
+    text-align: center;
+    height: 100%;
+}
+
+body>main>a>img {
+    width: 70%;
+    /* border: 1px solid black; */
+    /* size: 50%; */
+}
+
+
+
+/* sobre mi */
+
+body>section>div {
+    /* width: 19rem; */
+    /* text-align: center; */
+    /* border: 1px solid black; */
+    /* margin: 40px; */
+    padding-left: 30%;
+    padding-bottom: 1%;
+    padding-right: 10%;
+
+}
+
+body>section>div>img {
+    width: 50%;
+    height: fit-content;
+}
+
+body>section>div>p {
+    font-family: 'Lato', sans-serif;
+    font-size: medium;
+    color: black;
+    text-align: left;
+    margin-top: 10px;
+    width: 50%;
+}
+
+/* diseño y obras graficas */
+
+main>.tarjeta {
+    width: 200px;
+    padding: 5px;
+    border-radius: 10px;
+    margin-top: 20px;
+    /* height: 100%; */
+    transition: box-shadow 0.3s ease-in-out;
+}
+main>.tarjeta:hover{
+    box-shadow: 0 8px 16px rgba(4, 87, 160, 0.2);
+}
+
+main>.tarjeta>img {
+    width: 100%;
+    height: fit-content;
+}
+
+main>div>h3 {
+    text-align: left;
+    font-size: medium;
+    color: black;
+    font-family: 'Lato', sans-serif;
+}
+
+main>div>p {
+    font-family: 'Lato', sans-serif;
+    color: black;
+    text-align: left;
+    font-size: smaller;
+    line-height: 20px;
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 400px);
+    row-gap: 10px;
+    column-gap: 10px;
+    grid-template-areas: 
+    "area1 area2 area3 area4"
+    "area5 area6 area7 area8";
+    
+}
+/* .card {
+    padding: 15px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} */
+.card {
+    /* width: 200px; */
+    padding: 5px;
+    border-radius: 10px;
+    margin-top: 0px;
+    transition: box-shadow 0.3s ease-in-out;
+    
+}
+.card:hover{
+    box-shadow: 0 8px 16px rgba(4, 87, 160, 0.2);
+}
+.card>img {
+    display: block;
+    width: 100%;
+    height: fit-content;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+.card>h3 {
+    text-align: left;
+    font-size: smaller;
+    color: black;
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    font-variant: small-caps;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+}
+
+.card>p {
+    font-family: 'Lato', sans-serif;
+    color: rgb(42, 41, 41);
+    text-align: left;
+    font-size: x-small;
+    line-height: 10px;
+    font-variant: small-caps;
+    
+}
+
+#area1 {
+    border-color: transparent;
+    grid-area: area1;
+}
+#area2 {
+    border-color: transparent;
+    grid-area: area2;
+}
+#area3 {
+    border-color: transparent;
+    grid-area: area3;
+}
+#area4 {
+    border-color: transparent;
+    grid-area: area4;
+}
+#area5 {
+    border-color: transparent;
+    grid-area: area5;
+}
+#area6 {
+    border-color: transparent;
+    grid-area: area6;
+}
+#area7 {
+    border-color: transparent;
+    grid-area: area7;
+}
+#area8 {
+    border-color: transparent;
+    grid-area: area8;
+}
+
+@media (max-width: 1320px) {
+    .container {
+        /* display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 400px);
+        gap: 10px; */
+        grid-template: 
+        "area1 area2 area3 area4"
+        "area5 area6 area7 area8"
+        ;
+        
+    }
+}
+@media (max-width: 992px) {
+    .container {
+        /* display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 300px);
+        gap: 10px; */
+        grid-template: 
+        "area1 area2 area3"
+        "area6 area5 area7"
+        "area4 area8 area8"
+        ;
+    }
+}
+@media (max-width: 768px) {
+    .container {
+        /* display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 300px);
+        gap: 10px; */
+        grid-template: 
+        "area1 area2"
+        "area3 area4"
+        "area5 area6"
+        "area7 area8"
+        ;
+    }
+}
+@media (max-width: 450px) {
+    .container {
+        /* display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(8, 300px);
+        gap: 10px; */
+        grid-template: 
+        "area1"
+        "area2"
+        "area3"
+        "area4"
+        "area5"
+        "area6"
+        "area7"
+        "area8"
+        ;
+    }
+}
+/* contactar */
+
+body>section>article {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+body>section>article>form {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+body>section>article>form>fieldset {
+    font-family: 'Lato', sans-serif;
+    font-size: small;
+    margin-left: 20px;
+    margin-right: 20px;
+    border: 0px;
+}
+
+body>section>article>form>fieldset>div {
+    text-align: left;
+    margin-top: 10px;
+
+}
+
+body>section>article>form>fieldset>div>input {
+    font-family: 'Lato', sans-serif;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-width: 1px;
+    /* width: 100%; */
+    text-align: left;
+
+
+}
+
+body>section>article>form>fieldset>div.texto>label {
+    color: rgba(68, 68, 68, 0.674)
+}
+
+body>section>article>form>fieldset>.texto {
+    margin-top: 5px;
+    font-family: 'Lato', sans-serif;
+    font-size: xx-small;
+}
+
+body>section>article>form>fieldset>button {
+    color: rgb(255, 255, 255);
+    font-size: 10px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    background-color: rgb(4, 87, 160);
+    border: 0;
+    /* padding: 10px; */
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 8px;
+    letter-spacing: 2px;
+    
+
+}
+
+
+body>section>article>form>fieldset>div>textarea{
+    margin-top: 10px;
+    width: 100%;
+}
+
+
+footer {
+    align-items: last baseline;
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+    flex-wrap: wrap;
+    font-size: x-small;
+    margin-top: auto;
+}
+
+footer>.copy {
+    color: aliceblue;
+    font-family: 'Lato', sans-serif;
+}
+
+footer>.copy:hover {
+    color: rgb(4, 87, 160);
+}
+
+
+footer>.redes {
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+    align-items: center;
+}
+
+
+footer>.redes>a {
+    padding: 10px;
+    color: aliceblue;
+    font-family: 'Lato', sans-serif;
+    text-decoration: none;
+}
+
+footer>.redes>a:hover {
+    color: rgb(4, 87, 160);
+}
