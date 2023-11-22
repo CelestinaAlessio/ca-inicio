@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -9,7 +9,9 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Lato&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Lato&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@500&display=swap"
+        rel="stylesheet">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -17,62 +19,116 @@
 
 <body>
     <header>
-        <nav>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html"><img src="../imagenes/Sin título-2-02.png"
+                        alt="mini-logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/sobremi.html">SOBRE MI</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="./pages/diseno.html">DISEÑO</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/obrasgraficas.html">GRAFICA</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/contactar.html">CONTACTAR</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
 
-            <a href="../index.html">INICIO</a>
+            <!-- <a href="../index.html"> <img src="../imagenes/Sin título-2-02.png" alt=""></a>
             <a href="../pages/sobremi.html">SOBRE MI</a>
             <a href="./diseno.html">DISEÑO</a>
             <a href="../pages/obrasgraficas.html">OBRAS GRAFICAS</a>
-            <a href="../pages/contactar.html">CONTACTAR</a>
+            <a href="../pages/contactar.html">CONTACTAR</a> -->
         </nav>
 
     </header>
     <main>
-        <div class="tarjeta">
-            <img src="../imagenes/villaelvira.JPG" alt="libro-villa-elvira">
-            <h3>Villa Elvira</h3>
-            <p>Diseño de portada e interior del libro de Carlos Aprea de la serie Poesia - Pixel esditora</p>
+        <div class="row">
+            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-2 col-xl-2 col-xxl-2">
+                <section>
+
+                    <nav class="nav flex-column">
+                        <a class="nav-link" href="#">Identidad</a>
+                        <a class="nav-link" href="#">Marcas</a>
+                        <a class="nav-link active" href="#">Editorial</a>
+                        <a class="nav-link" href="#">Lineas gráficas</a>
+                        <a class="nav-link" href="#">Ux-Ui</a>
+                        <a class="nav-link" href="#">Web</a>
+                    </nav>
+
+                </section>
+            </div>
+            <div class="col-xs-12 col-sm-9 col-md-9 col-lg-10 col-xl-10 col-xxl-10">
+                <div class="container">
+                    <div class="card" id="area1">
+                        <img src="../imagenes/villaelvira.JPG" alt="libro-villa-elvira">
+                        <h3>villa elvira</h3>
+                        <p>diseño de portada e interior del libro de carlos aprea de la serie Poesia - pixel esditora
+                        </p>
+                    </div>
+                    <div class="card" id="area2">
+                        <img src="../imagenes/PIXEL-saga-relampago.jpg" alt="libros-saga-relampago">
+                        <h3>saga relámpago</h3>
+                        <p>dirección de arte de la serie de pixel editora</p>
+                    </div>
+                    <div class="card" id="area3">
+                        <img src="../imagenes/pixel-perfectosatentados-uli.JPG" alt="libro-diario-de-una-marica-mala">
+                        <h3>diario de una marica mala</h3>
+                        <p>diseño de portada e interior del libro de ulises rojas de la serie perfectos atentados -
+                            pixel
+                            editora
+                        </p>
+                    </div>
+                    <div class="card"id="area4">
+                        <img src="../imagenes/anita.png" alt="libro-gif-analogicos">
+                        <h3>gif analógicos</h3>
+                        <p>diseño de portada, interior y dirección de arte de la serie del libro de Analia Godoy de la
+                            serie
+                            pagana
+                            - pixel editora</p>
+                    </div>
+                    <div class="card" id="area5">
+                        <img src="../imagenes/elobservatorio2.jpg" alt="libro-artesanal-el-observatorio">
+                        <h3>el observatorio</h3>
+                        <p>diseño de portada, interior y dirección de arte de la serie del libro de poesia de Francisco
+                            Magallanes
+                            de la serie superficies de placer - fa editora</p>
+                    </div>
+                    <div class="card" id="area6">
+                        <img src="../imagenes/exiliadas-val-flores.jpg"
+                            alt="libro-artesanal-cincuentaysiete-laconismos">
+                        <h3>ella, no. 57 laconismos postapocalípticos (o la masacre de una lesbiana eremita)</h3>
+                        <p>Diseño de interior y dirección de arte de la serie del libro de val flores - exiliadas</p>
+                    </div>
+                    <div class="card" id="area7">
+                        <img src="../imagenes/justi.jpg" alt="libro-melisa-de-rinesi">
+                        <h3>melisa de rinesi</h3>
+                        <p>diseño de portada, interior y dirección de arte de la serie del libro de Justina de urquiza
+                            de la
+                            serie
+                            pagana - pixel editora</p>
+                    </div>
+                    <div class="card" id="area8">
+                        <img src="../imagenes/lila.jpg" alt="libro-artesanal-lila-danzarina">
+                        <h3>lila danzarina</h3>
+                        <p>diseño y dirección de arte de la serie del libro de greta hammond de la serie superficies de
+                            placer - fa editora</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="tarjeta">
-            <img src="../imagenes/PIXEL-saga-relampago.jpg" alt="libros-saga-relampago">
-            <h3>Saga relámpago</h3>
-            <p>Dirección de arte de la serie de Pixel editora</p>
-        </div>
-        <div class="tarjeta">
-            <img src="../imagenes/pixel-perfectosatentados-uli.JPG" alt="libro-diario-de-una-marica-mala">
-            <h3>Diario de una marica mala</h3>
-            <p>Diseño de portada e interior del libro de ulises rojas de la serie Perfectos atentados - Pixel editora
-            </p>
-        </div>
-        <div class="tarjeta">
-            <img src="../imagenes/anita.png" alt="libro-gif-analogicos">
-            <h3>Gif analógicos</h3>
-            <p>Diseño de portada, interior y dirección de arte de la serie del libro de Analia Godoy de la serie Pagana
-                - Pixel editora</p>
-        </div>
-        <div class="tarjeta">
-            <img src="../imagenes/elobservatorio2.jpg" alt="libro-artesanal-el-observatorio">
-            <h3>El observatorio</h3>
-            <p>Diseño de portada, interior y dirección de arte de la serie del libro de poesia de Francisco Magallanes
-                de la serie Superficies de placer - Fa editora</p>
-        </div>
-        <div class="tarjeta">
-            <img src="../imagenes/exiliadas-val-flores.jpg" alt="libro-artesanal-cincuentaysiete-laconismos">
-            <h3>Ella, no. 57 laconismos postapocalípticos (o la masacre de una lesbiana eremita)</h3>
-            <p>Diseño de interior y dirección de arte de la serie del libro de val flores - Exiliadas</p>
-        </div>
-        <div class="tarjeta">
-            <img src="../imagenes/justi.jpg" alt="libro-melisa-de-rinesi">
-            <h3>Melisa de Rinesi</h3>
-            <p>Diseño de portada, interior y dirección de arte de la serie del libro de Justina de urquiza de la serie
-                Pagana - Pixel editora</p>
-        </div>
-        <div class="tarjeta">
-            <img src="../imagenes/lila.jpg" alt="libro-artesanal-lila-danzarina">
-            <h3>Lila danzarina</h3>
-            <p>Diseño y dirección de arte de la serie del libro de Greta Hammond de la serie Superficies de placer - Fa
-                editora</p>
-        </div>
+
     </main>
     <footer>
         <div class="copy">
@@ -85,11 +141,11 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-    crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-    crossorigin="anonymous"></script>
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -14,25 +14,30 @@ body {
     flex-direction: column;
     min-height: 100%;
     grid-template-rows: auto 1fr auto;
+    /* padding-left: 5%;
+    padding-right: 5%; */
+    
 }
 
 
 /* nav */
-body>header>nav {
-    padding: 20px;
-    margin: 10px;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+.nav-link {
+    padding-right: 0;
+    padding-left: 0;
+    font-family: 'Lato', sans-serif;
+    font-size: medium;
+    color: black;
+    
 }
 
-body>header>nav>a {
+.nav-link.active,
+.show>.nav-link {
+    font-weight: bolder;
     color: black;
-    text-decoration: none;
-    font-family: 'Lato', sans-serif; 
-    font-size: large;
-    margin: 10px;
-    text-align: center;
+
+}
+.img {
+    width: ;
 }
 
 body>header>nav>a:hover {
@@ -63,6 +68,7 @@ body>main>a>img {
     /* size: 50%; */
 }
 
+/* main>section>nav>.flex-column {} */
 
 
 /* sobre mi */
@@ -92,24 +98,36 @@ body>section>div>p {
     width: 50%;
 }
 
+/* divisor de diseño */
+main>section {
+    flex-direction: column;
+    margin-top: 10%;
+}
+
+main>section>nav>.flex-column {
+    padding-top: 100%;
+}
+
+
 /* diseño y obras graficas */
 
-main>.tarjeta {
+/* main>.tarjeta {
     width: 200px;
     padding: 5px;
     border-radius: 10px;
     margin-top: 20px;
-    /* height: 100%; */
+    
     transition: box-shadow 0.3s ease-in-out;
-}
-main>.tarjeta:hover{
-    box-shadow: 0 8px 16px rgba(4, 87, 160, 0.2);
-}
+} */
 
-main>.tarjeta>img {
+/* main>.tarjeta:hover {
+    box-shadow: 0 8px 16px rgba(4, 87, 160, 0.2);
+} */
+
+/* main>.tarjeta>img {
     width: 100%;
     height: fit-content;
-}
+} */
 
 main>div>h3 {
     text-align: left;
@@ -125,17 +143,19 @@ main>div>p {
     font-size: smaller;
     line-height: 20px;
 }
+
 .container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 400px);
     row-gap: 10px;
     column-gap: 10px;
-    grid-template-areas: 
-    "area1 area2 area3 area4"
-    "area5 area6 area7 area8";
-    
+    grid-template-areas:
+        "area1 area2 area3 area4"
+        "area5 area6 area7 area8";
+
 }
+
 /* .card {
     padding: 15px;
     border-radius: 5px;
@@ -150,10 +170,13 @@ main>div>p {
     margin-top: 0px;
     transition: box-shadow 0.3s ease-in-out;
     
+
 }
-.card:hover{
+
+.card:hover {
     box-shadow: 0 8px 16px rgba(4, 87, 160, 0.2);
 }
+
 .card>img {
     display: block;
     width: 100%;
@@ -161,6 +184,7 @@ main>div>p {
     margin-bottom: 10px;
     border-radius: 5px;
 }
+
 .card>h3 {
     text-align: left;
     font-size: smaller;
@@ -180,37 +204,44 @@ main>div>p {
     font-size: x-small;
     line-height: 10px;
     font-variant: small-caps;
-    
+
 }
 
 #area1 {
     border-color: transparent;
     grid-area: area1;
 }
+
 #area2 {
     border-color: transparent;
     grid-area: area2;
 }
+
 #area3 {
     border-color: transparent;
     grid-area: area3;
 }
+
 #area4 {
     border-color: transparent;
     grid-area: area4;
 }
+
 #area5 {
     border-color: transparent;
     grid-area: area5;
 }
+
 #area6 {
     border-color: transparent;
     grid-area: area6;
 }
+
 #area7 {
     border-color: transparent;
     grid-area: area7;
 }
+
 #area8 {
     border-color: transparent;
     grid-area: area8;
@@ -222,58 +253,62 @@ main>div>p {
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(2, 400px);
         gap: 10px; */
-        grid-template: 
-        "area1 area2 area3 area4"
-        "area5 area6 area7 area8"
+        grid-template:
+            "area1 area2 area3 area4"
+            "area5 area6 area7 area8"
         ;
-        
+
     }
 }
+
 @media (max-width: 992px) {
     .container {
         /* display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(3, 300px);
         gap: 10px; */
-        grid-template: 
-        "area1 area2 area3"
-        "area6 area5 area7"
-        "area4 area8 area8"
+        grid-template:
+            "area1 area2 area3"
+            "area6 area5 area7"
+            "area4 area8 area8"
         ;
     }
 }
+
 @media (max-width: 768px) {
     .container {
         /* display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(4, 300px);
         gap: 10px; */
-        grid-template: 
-        "area1 area2"
-        "area3 area4"
-        "area5 area6"
-        "area7 area8"
+        grid-template:
+            "area1 area2"
+            "area3 area4"
+            "area5 area6"
+            "area7 area8"
         ;
     }
 }
+
 @media (max-width: 450px) {
     .container {
         /* display: grid;
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(8, 300px);
         gap: 10px; */
-        grid-template: 
-        "area1"
-        "area2"
-        "area3"
-        "area4"
-        "area5"
-        "area6"
-        "area7"
-        "area8"
+        grid-template:
+            "area1"
+            "area2"
+            "area3"
+            "area4"
+            "area5"
+            "area6"
+            "area7"
+            "area8"
         ;
     }
 }
+
 /* contactar */
 
 body>section>article {
@@ -337,12 +372,12 @@ body>section>article>form>fieldset>button {
     padding-top: 10px;
     padding-bottom: 8px;
     letter-spacing: 2px;
-    
+
 
 }
 
 
-body>section>article>form>fieldset>div>textarea{
+body>section>article>form>fieldset>div>textarea {
     margin-top: 10px;
     width: 100%;
 }
